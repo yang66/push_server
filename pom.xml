@@ -108,6 +108,12 @@
             </systemPath>
         </dependency>
 
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpmime</artifactId>
+            <version>4.5.13</version>
+        </dependency>
+
         <!--vivo push end-->
 
         <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->

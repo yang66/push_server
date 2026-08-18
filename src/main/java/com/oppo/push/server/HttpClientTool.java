@@ -62,7 +62,7 @@ class HttpClientTool {
                             return true;
                         }
                     };
-                    Registry<ConnectionSocketFactory> socketFactoryRegistry = RegistryBuilder.create().register(Constants.HTTPS_PROTOCOL, new SSLConnectionSocketFactory(sslContext, hostnameVerifier)).build();
+                    Registry<ConnectionSocketFactory> socketFactoryRegistry = RegistryBuilder.<ConnectionSocketFactory>create().register(Constants.HTTPS_PROTOCOL, new SSLConnectionSocketFactory(sslContext, hostnameVerifier)).build();
                     manager = new PoolingHttpClientConnectionManager(socketFactoryRegistry);
                     manager.setMaxTotal(Constants.HTTP_MAX_CONNECTION);
                     manager.setDefaultMaxPerRoute(Constants.HTTP_MAX_ROUTE);
