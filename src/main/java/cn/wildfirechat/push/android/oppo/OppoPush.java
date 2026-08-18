@@ -133,6 +133,8 @@ public class OppoPush {
         // 0：不限联网方式, 1：仅wifi推送
         notification.setNetworkType(0);
 
+        notification.setCategory(mConfig.getCategory());
+
         return notification;
     }
 }

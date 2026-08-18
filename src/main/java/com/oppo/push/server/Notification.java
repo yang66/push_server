@@ -32,6 +32,7 @@ public class Notification {
     private Integer badgeMessageCount;
     private Integer badgeOperationType;
     private String auditResponse;
+    private String category;
 
     public void setAppMessageId(String appMessageId) {
         this.appMessageId = appMessageId;
@@ -272,6 +273,14 @@ public class Notification {
 
     public String getAuditResponse() {
         return this.auditResponse;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
     }
 
     public String toString() {

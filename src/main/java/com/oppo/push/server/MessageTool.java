@@ -114,6 +114,9 @@ class MessageTool {
         if (!Validate.isEmpty(message.getAuditResponse())) {
             parameters.put("auditResponse", message.getAuditResponse());
         }
+        if (!Validate.isEmpty(message.getCategory())) {
+            parameters.put("category", message.getCategory());
+        }
         return parameters;
     }
 
