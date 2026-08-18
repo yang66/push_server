@@ -9,6 +9,7 @@ public class VivoConfig {
     private String appSecret;
     private String appId;
     private String appKey;
+    private String category;
 
     public String getAppSecret() {
         return appSecret;
@@ -32,5 +33,13 @@ public class VivoConfig {
 
     public void setAppKey(String appKey) {
         this.appKey = appKey;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
     }
 }

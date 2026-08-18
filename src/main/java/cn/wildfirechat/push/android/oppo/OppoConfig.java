@@ -8,6 +8,15 @@ import org.springframework.context.annotation.Configuration;
 public class OppoConfig {
     private String appSecret;
     private String appKey;
+    private String category;
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
 
     public String getAppSecret() {
         return appSecret;

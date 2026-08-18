@@ -71,6 +71,7 @@ public class VivoPush {
                 .timeToLive(1000)
                 .skipType(1)
                 .networkType(-1)
+                .category(mConfig.getCategory())
                 .requestId(System.currentTimeMillis() + "_" + new Random().nextInt(1000))
                 .pushMode(0);
 

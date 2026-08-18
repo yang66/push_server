@@ -119,17 +119,20 @@ public class ConfigService {
         Map<String, String> oppoDefaults = new LinkedHashMap<>();
         oppoDefaults.put("oppo.appKey", "");
         oppoDefaults.put("oppo.appSecret", "");
+        oppoDefaults.put("oppo.category", "");
         DEFAULT_CONFIG_FIELDS.put("oppo", oppoDefaults);
 
         Map<String, String> vivoDefaults = new LinkedHashMap<>();
         vivoDefaults.put("vivo.appId", "");
         vivoDefaults.put("vivo.appKey", "");
         vivoDefaults.put("vivo.appSecret", "");
+        vivoDefaults.put("vivo.category", "");
         DEFAULT_CONFIG_FIELDS.put("vivo", vivoDefaults);
 
         Map<String, String> xiaomiDefaults = new LinkedHashMap<>();
         xiaomiDefaults.put("xiaomi.appSecret", "");
         xiaomiDefaults.put("xiaomi.channelId", "");
+        xiaomiDefaults.put("xiaomi.category", "");
         DEFAULT_CONFIG_FIELDS.put("xiaomi", xiaomiDefaults);
 
         Map<String, String> unipushDefaults = new LinkedHashMap<>();
