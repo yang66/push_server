@@ -10,6 +10,9 @@ public class HonorConfig {
     private String appId;
     private String badgeClass;
 
+    // 开发者后台，查看推送服务处查看，不是野火的 clientId
+    private String clientId;
+
     public String getAppSecret() {
         return appSecret;
     }
@@ -32,5 +35,13 @@ public class HonorConfig {
 
     public void setBadgeClass(String badgeClass) {
         this.badgeClass = badgeClass;
+    }
+
+    public String getClientId() {
+        return clientId;
+    }
+
+    public void setClientId(String clientId) {
+        this.clientId = clientId;
     }
 }

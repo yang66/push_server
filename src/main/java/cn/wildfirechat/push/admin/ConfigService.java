@@ -112,6 +112,7 @@ public class ConfigService {
 
         Map<String, String> honorDefaults = new LinkedHashMap<>();
         honorDefaults.put("honor.appId", "");
+        honorDefaults.put("honor.clientId", "");
         honorDefaults.put("honor.appSecret", "");
         honorDefaults.put("honor.badgeClass", "");
         DEFAULT_CONFIG_FIELDS.put("honor", honorDefaults);
@@ -479,11 +480,12 @@ public class ConfigService {
 
     private String validateHonorConfig(Map<String, String> config) {
         String appId = config.get("honor.appId");
+        String clientId = config.get("honor.clientId");
         String appSecret = config.get("honor.appSecret");
-        if (isEmpty(appId) || "0".equals(appId) || isEmpty(appSecret)) {
-            return "荣耀推送 appId 或 appSecret 不能为空";
+        if (isEmpty(appId) || "0".equals(appId) || isEmpty(clientId) || isEmpty(appSecret)) {
+            return "荣耀推送 appId、clientId 或 appSecret 不能为空";
         }
-        return validateOAuthToken("https://iam.developer.honor.com/auth/token", appId, appSecret, "荣耀推送");
+        return validateOAuthToken("https://iam.developer.honor.com/auth/token", clientId, appSecret, "荣耀推送");
     }
 
     private String validateOAuthToken(String tokenUrl, String appId, String appSecret, String platformName) {
