@@ -113,6 +113,7 @@ public class ConfigService {
         Map<String, String> honorDefaults = new LinkedHashMap<>();
         honorDefaults.put("honor.appId", "");
         honorDefaults.put("honor.clientId", "");
+        honorDefaults.put("honor.clientSecret", "");
         honorDefaults.put("honor.appSecret", "");
         honorDefaults.put("honor.badgeClass", "");
         DEFAULT_CONFIG_FIELDS.put("honor", honorDefaults);
@@ -133,7 +134,6 @@ public class ConfigService {
         Map<String, String> xiaomiDefaults = new LinkedHashMap<>();
         xiaomiDefaults.put("xiaomi.appSecret", "");
         xiaomiDefaults.put("xiaomi.channelId", "");
-        xiaomiDefaults.put("xiaomi.category", "");
         DEFAULT_CONFIG_FIELDS.put("xiaomi", xiaomiDefaults);
 
         Map<String, String> unipushDefaults = new LinkedHashMap<>();

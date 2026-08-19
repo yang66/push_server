@@ -66,8 +66,7 @@ public class HonorPush {
     private void refreshToken() throws IOException {
         LOG.info("Honor refresh token");
         String msgBody = MessageFormat.format(
-            "grant_type=client_credentials&client_secret={0}&client_id={1}",
-            URLEncoder.encode(mConfig.getAppSecret(), "UTF-8"), mConfig.getClientId());
+            "grant_type=client_credentials&client_id={0}&client_secret={1}", mConfig.getClientId(), mConfig.getClientSecret());
         String response = httpPost(tokenUrl, "", msgBody, 5000, 5000);
         JSONObject obj = JSONObject.parseObject(response);
 

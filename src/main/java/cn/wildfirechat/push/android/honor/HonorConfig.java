@@ -12,6 +12,7 @@ public class HonorConfig {
 
     // 开发者后台，查看推送服务处查看，不是野火的 clientId
     private String clientId;
+    private String clientSecret;
 
     public String getAppSecret() {
         return appSecret;
@@ -43,5 +44,13 @@ public class HonorConfig {
 
     public void setClientId(String clientId) {
         this.clientId = clientId;
+    }
+
+    public String getClientSecret() {
+        return clientSecret;
+    }
+
+    public void setClientSecret(String clientSecret) {
+        this.clientSecret = clientSecret;
     }
 }
