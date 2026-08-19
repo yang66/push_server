@@ -72,7 +72,10 @@ public class VivoPush {
                 .skipType(1)
                 .networkType(-1)
                 .requestId(System.currentTimeMillis() + "_" + new Random().nextInt(1000))
-                .pushMode(0);
+                .pushMode(0)
+                // VIVO推送需要增加二级类型IM才可不被限制推送数量。否则默认走的营销消息。每天同帐号限制2条营销消息。
+                .category("IM");
+
 
         if (pushMessage.pushMessageType != PushMessageType.PUSH_MESSAGE_TYPE_NORMAL) {
             builder.timeToLive(60);
